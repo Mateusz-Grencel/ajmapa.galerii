@@ -1,0 +1,23 @@
+.background{
+    background-image: url("/static/images/art.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height:100vh;
+}
+
+.sticky-menu-nav{
+    position:sticky;
+    top:0px;
+    z-index:1000;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+#about, #contact, #artjam, #cdv, #blackwhite, #random, #normal {
+  scroll-margin-top: 65px;
+}

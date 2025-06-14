@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c68d0438a9b023238c2dbd7da2f2c6fc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c68d0438a9b023238c2dbd7da2f2c6fc" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c68d0438a9b023238c2dbd7da2f2c6fc = L.map(
+                "map_c68d0438a9b023238c2dbd7da2f2c6fc",
+                {
+                    center: [52.408493099999994, 16.919672621739128],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_24a9f68bcafd56ef1c7d5fec23854c82 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_24a9f68bcafd56ef1c7d5fec23854c82.addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var marker_21e55f66a20a8ab8d6f2a1fb3d1dbe25 = L.marker(
+                [52.4096614, 16.9338933],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_730b614fb7f4dd87cd01393b29a75fde = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b156a31b6d367c584e6445792d6f2eb3 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_12f30c37199020400eaf1731704fccb6 = $(`<div id="html_12f30c37199020400eaf1731704fccb6" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Molski Gallery</h3>        <p><strong>📍</strong> Wroniecka 2, Poznań</p>    <p><strong>🕐</strong> Wt-Pt: 12:00–17:00, Sob: 11:00-14:00</p><p><strong>📞</strong> 730 056 730</p><p><strong>✉️</strong> office@molskigallery.com</p><p><strong>🌐</strong> <a href="https://molskigallery.com/" target="_blank">https://molskigallery.com/</a></p><img src="https://molskigallery.com/assets/img/og-image-1200x630.jpg" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://pik.poznan.pl/wp-content/uploads/2025/04/MOLSKI-Gallery-.jpg" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/molskigallery" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/molski_gallery/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a> | <a href="https://www.youtube.com/@molskigallery" target="_blank" style="color: #FF0000; text-decoration: none;"><i class="fa-brands fa-youtube fa-beat"></i></a></p></div></div>`)[0];
+                popup_b156a31b6d367c584e6445792d6f2eb3.setContent(html_12f30c37199020400eaf1731704fccb6);
+            
+        
+
+        marker_21e55f66a20a8ab8d6f2a1fb3d1dbe25.bindPopup(popup_b156a31b6d367c584e6445792d6f2eb3)
+        ;
+
+        
+    
+    
+            marker_21e55f66a20a8ab8d6f2a1fb3d1dbe25.bindTooltip(
+                `<div>
+                     Molski Gallery
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_21e55f66a20a8ab8d6f2a1fb3d1dbe25.setIcon(icon_730b614fb7f4dd87cd01393b29a75fde);
+            
+    
+            var marker_5527af8cc4e830b7f02513b246e57e15 = L.marker(
+                [52.4080345, 16.918695],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_7efa1a7e8d5b2a225d789bca521ae674 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2f698460260af385562efc3985ec36c = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_4a8e568dfbea2ba2e7bda3fe465d72db = $(`<div id="html_4a8e568dfbea2ba2e7bda3fe465d72db" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Centrum Kultury ZAMEK</h3>        <p><strong>📍</strong> Św. Marcin 80, Poznań</p>    <p><strong>🕐</strong> Pn-Nd: 12:00–20:00</p><p><strong>📞</strong> 61 646 52 72</p><p><strong>✉️</strong> sekretariat@ckzamek.pl</p><p><strong>🌐</strong> <a href="https://mediateka.ckzamek.pl/collection/wystawy/" target="_blank">https://mediateka.ckzamek.pl/collection/wystawy/</a></p><img src="https://image.bilety24.pl/original/organizer/centrum-kultury-zamek-2020.jpg" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/2008_Kaiserschloss_Posen_04.JPG" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/ckzamek" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/ckzamek/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a> | <a href="https://www.youtube.com/@PoznanCKZamek" target="_blank" style="color: #FF0000; text-decoration: none;"><i class="fa-brands fa-youtube fa-beat"></i></a></p></div></div>`)[0];
+                popup_d2f698460260af385562efc3985ec36c.setContent(html_4a8e568dfbea2ba2e7bda3fe465d72db);
+            
+        
+
+        marker_5527af8cc4e830b7f02513b246e57e15.bindPopup(popup_d2f698460260af385562efc3985ec36c)
+        ;
+
+        
+    
+    
+            marker_5527af8cc4e830b7f02513b246e57e15.bindTooltip(
+                `<div>
+                     Centrum Kultury ZAMEK
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5527af8cc4e830b7f02513b246e57e15.setIcon(icon_7efa1a7e8d5b2a225d789bca521ae674);
+            
+    
+            var marker_6978a151ffbc48c3fa866a5c82a8cbfa = L.marker(
+                [52.4065896, 16.9379642],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_20abee77efcd132e994adb2c0c9a5076 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed85a22e4175967e87ce11b9bcdd6d8e = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_a2d96732a62f85d6403ed6dc4f4c1143 = $(`<div id="html_a2d96732a62f85d6403ed6dc4f4c1143" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Galeria Sztuki Współczesnej</h3>        <p><strong>📍</strong> Garbary 48, Poznań</p>    <p><strong>🕐</strong> Wt-Pt: 11:00-18:00, Sb:11:00-14:00</p><p><strong>📞</strong> 61 852 91 70</p><p><strong>✉️</strong> galeria@garbary48.pl</p><p><strong>🌐</strong> <a href="https://garbary48.com.pl/" target="_blank">https://garbary48.com.pl/</a></p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUpDjQnI_vnbeOrGkT_kK_ldj5H7ROgdMI0g&s" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://lh6.googleusercontent.com/proxy/Fss01Yeee8YUwY5GJVLyJgLGL8k7Ws6Y7JAiXw4gmE_b2In1Ao8sSVxrMM2YS2J3yt8mKjMyH3nXAgz6DyAILtYyMmNGfJwKJLnRCM1GD3gq" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/p/Galeria-Sztuki-Wsp%C3%B3%C5%82czesnej-Garbary-48-100057484328716/?locale=pl_PL" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/explore/locations/610253323/galeria-sztuki-wspolczesnej-garbary-48/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_ed85a22e4175967e87ce11b9bcdd6d8e.setContent(html_a2d96732a62f85d6403ed6dc4f4c1143);
+            
+        
+
+        marker_6978a151ffbc48c3fa866a5c82a8cbfa.bindPopup(popup_ed85a22e4175967e87ce11b9bcdd6d8e)
+        ;
+
+        
+    
+    
+            marker_6978a151ffbc48c3fa866a5c82a8cbfa.bindTooltip(
+                `<div>
+                     Galeria Sztuki Współczesnej
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6978a151ffbc48c3fa866a5c82a8cbfa.setIcon(icon_20abee77efcd132e994adb2c0c9a5076);
+            
+    
+            var marker_0271bfeca2321b06bc37415a99ce353d = L.marker(
+                [52.4613855, 16.8278262],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_daaa26c22c187a99ba99340d1d35895d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_74bb5c91ffcfa4430e843bd3a315cf2c = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_7677e4da888fe85b51f7553adde0c8e2 = $(`<div id="html_7677e4da888fe85b51f7553adde0c8e2" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">ABC Gallery</h3>        <p><strong>📍</strong> Koszalińska 15, Poznań</p>    <p><strong>🕐</strong> Wt-Pt: 12:00-18:00</p><p><strong>📞</strong> 605 446 182</p><p><strong>✉️</strong> galeria@abcgallery.pl</p><p><strong>🌐</strong> <a href="https://abcgallery.pl/" target="_blank">https://abcgallery.pl/</a></p><img src="https://abcgallery.pl/wp-content/themes/twentysixteen-child/img/logo.png" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npCldnWrWCAeayBjkBe7cYXD_OefInGhW3KSvoA7eHb2sgTNcCAv7dLURrJqo0QWxh_NIPSidvhbTt7ejCY8qKG-AmcG1nbYeoe733TkwCAxvlIumqjnxDuYKUDjhow29ZYcIr2=s1360-w1360-h1020-rw" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/ABCGallery/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/abc_gallery_poznan/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_74bb5c91ffcfa4430e843bd3a315cf2c.setContent(html_7677e4da888fe85b51f7553adde0c8e2);
+            
+        
+
+        marker_0271bfeca2321b06bc37415a99ce353d.bindPopup(popup_74bb5c91ffcfa4430e843bd3a315cf2c)
+        ;
+
+        
+    
+    
+            marker_0271bfeca2321b06bc37415a99ce353d.bindTooltip(
+                `<div>
+                     ABC Gallery
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0271bfeca2321b06bc37415a99ce353d.setIcon(icon_daaa26c22c187a99ba99340d1d35895d);
+            
+    
+            var marker_7893a254175a1842bafef2fe7729bbe2 = L.marker(
+                [52.4081391, 16.9333131],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_37f856cdad504642b9fe2412f160c9ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ef82c4464de01b854ed95f8b8fe3d1be = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_34dbe961f895000feb60ef59307eb33a = $(`<div id="html_34dbe961f895000feb60ef59307eb33a" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Galeria Miejska Arsenał</h3>        <p><strong>📍</strong> Stary Rynek 6, Poznań</p>    <p><strong>🕐</strong> Wt-Pt: 12:00-19:00, Sb:11:00-19:00, Nd:11:00-16:00</p><p><strong>📞</strong> 61 852 95 01</p><p><strong>✉️</strong> arsenal@arsenal.art.pl</p><p><strong>🌐</strong> <a href="https://arsenal.art.pl/" target="_blank">https://arsenal.art.pl/</a></p><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Galeria_Miejska_Arsena%C5%82_w_Poznaniu.png" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://bi.im-g.pl/im/89/c7/1d/z31225993AMP,W-pawilonie-po-lewej-stronie-jest-Galeria-Miejska-.jpg" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/GaleriaMiejskaArsenal/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/galeriamiejskaarsenal/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a> | <a href="https://www.youtube.com/@gamapoznan/featured" target="_blank" style="color: #FF0000; text-decoration: none;"><i class="fa-brands fa-youtube fa-beat"></i></a></p></div></div>`)[0];
+                popup_ef82c4464de01b854ed95f8b8fe3d1be.setContent(html_34dbe961f895000feb60ef59307eb33a);
+            
+        
+
+        marker_7893a254175a1842bafef2fe7729bbe2.bindPopup(popup_ef82c4464de01b854ed95f8b8fe3d1be)
+        ;
+
+        
+    
+    
+            marker_7893a254175a1842bafef2fe7729bbe2.bindTooltip(
+                `<div>
+                     Galeria Miejska Arsenał
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7893a254175a1842bafef2fe7729bbe2.setIcon(icon_37f856cdad504642b9fe2412f160c9ff);
+            
+    
+            var marker_70c9ac3f743342c9d3516ad37f8ad0b8 = L.marker(
+                [52.4125796, 16.9501914],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_88dda3997fb05f65ffae38781b462f6c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7585c75b999617b7fff4b518f5fc1c27 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_ad5f943927eae2af36f8e32add844b9c = $(`<div id="html_ad5f943927eae2af36f8e32add844b9c" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Galeria Śluza</h3>        <p><strong>📍</strong> Dziekańska 2, Poznań</p>    <p><strong>🕐</strong> Wt-Pt: 09:00-18:00, Sb-Nd:10:00-19:00</p><p><strong>📞</strong> 61 647 76 31</p><p><strong>✉️</strong> wystawy@pcd.poznan.pl</p><p><strong>🌐</strong> <a href="https://galeriasluza.pl/" target="_blank">https://galeriasluza.pl/</a></p><img src="https://galeriasluza.pl/wp-content/themes/sluza/img/static/logo.svg?v=1.02" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://galeriasluza.pl/wp-content/uploads/2021/12/LGD_4298.jpg" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/GaleriaSluza/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/galeria_sluza/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a> | <a href="https://www.youtube.com/channel/UCGVr83zlHwUqi-qSgi4uZdw" target="_blank" style="color: #FF0000; text-decoration: none;"><i class="fa-brands fa-youtube fa-beat"></i></a></p></div></div>`)[0];
+                popup_7585c75b999617b7fff4b518f5fc1c27.setContent(html_ad5f943927eae2af36f8e32add844b9c);
+            
+        
+
+        marker_70c9ac3f743342c9d3516ad37f8ad0b8.bindPopup(popup_7585c75b999617b7fff4b518f5fc1c27)
+        ;
+
+        
+    
+    
+            marker_70c9ac3f743342c9d3516ad37f8ad0b8.bindTooltip(
+                `<div>
+                     Galeria Śluza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_70c9ac3f743342c9d3516ad37f8ad0b8.setIcon(icon_88dda3997fb05f65ffae38781b462f6c);
+            
+    
+            var marker_72d6b97d174364375e357aaea411d04b = L.marker(
+                [52.4100044, 16.9340019],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_5a6d72f8e41ee2b68d8895f8675bace2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4d6aafa9ab91f5ded0b570864f24b114 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_6cf8f4a5329baedd3b75413f700917bd = $(`<div id="html_6cf8f4a5329baedd3b75413f700917bd" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Mil'Art. Galeria sztuki</h3>        <p><strong>📍</strong> Wroniecka 6, Poznań</p>    <p><strong>🕐</strong> Pn-Pt: 11:00-18:00, Sb:11:00-14:00</p><p><strong>📞</strong> 61 851 74 01</p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAAw9jfazLcC1Rxjcne9e6OE4vBwa9GEW1fQ&s" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrfa-VaW6oH97mEEFaWHdwWZYMjgm0asgVH5ZEELnBC3JjUW2PGoQd8iIFIYEAO_mU4sRqdO4RnS3OSvLJltsdt3LQt4UaoiX5_-b7FXoHFrhw9QXaSP0ZVs3sLw0IaKqBcv2IQ=s1360-w1360-h1020-rw" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br></div></div>`)[0];
+                popup_4d6aafa9ab91f5ded0b570864f24b114.setContent(html_6cf8f4a5329baedd3b75413f700917bd);
+            
+        
+
+        marker_72d6b97d174364375e357aaea411d04b.bindPopup(popup_4d6aafa9ab91f5ded0b570864f24b114)
+        ;
+
+        
+    
+    
+            marker_72d6b97d174364375e357aaea411d04b.bindTooltip(
+                `<div>
+                     Mil'Art. Galeria sztuki
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_72d6b97d174364375e357aaea411d04b.setIcon(icon_5a6d72f8e41ee2b68d8895f8675bace2);
+            
+    
+            var marker_e6d9f432deee86047b6d8357ee10c647 = L.marker(
+                [52.4096961, 16.9357652],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_dbac559c59f40d046810eed32a657a67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9cdc47ccf35bd1082f3bf9c8af2dd2c0 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_cd8e073faf7b7a0cf88db510fbee8ccc = $(`<div id="html_cd8e073faf7b7a0cf88db510fbee8ccc" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Galeria U Jezuitów - Pracownia Działań Twórczych</h3>        <p><strong>📍</strong> Dominikańska 8, Poznań</p>    <p><strong>🕐</strong> Pn-Sb: 10:00-18:00</p><p><strong>📞</strong> 691 119 739</p><p><strong>🌐</strong> <a href="http://www.galeriaujezuitow.pl/" target="_blank">http://www.galeriaujezuitow.pl/</a></p><img src="https://scontent-waw2-2.xx.fbcdn.net/v/t39.30808-6/380541086_799499851968572_1296668404396643981_n.jpg" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/galeriaujezuitow" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a></p></div></div>`)[0];
+                popup_9cdc47ccf35bd1082f3bf9c8af2dd2c0.setContent(html_cd8e073faf7b7a0cf88db510fbee8ccc);
+            
+        
+
+        marker_e6d9f432deee86047b6d8357ee10c647.bindPopup(popup_9cdc47ccf35bd1082f3bf9c8af2dd2c0)
+        ;
+
+        
+    
+    
+            marker_e6d9f432deee86047b6d8357ee10c647.bindTooltip(
+                `<div>
+                     Galeria U Jezuitów - Pracownia Działań Twórczych
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e6d9f432deee86047b6d8357ee10c647.setIcon(icon_dbac559c59f40d046810eed32a657a67);
+            
+    
+            var marker_6bba71cff9fa046523610305336b98af = L.marker(
+                [52.4077492, 16.9307771],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_dd8af4c85be3ef8e9e22025789b6c928 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_88016e3e67c1f35d0becf10cd90f5027 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_a28fe52396a063fb0125d01937a3e5fd = $(`<div id="html_a28fe52396a063fb0125d01937a3e5fd" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Galeria Sztuki Współczesnej Jarek Cechmanowicz</h3>        <p><strong>📍</strong> Ignacego Paderewskiego 7, Poznań</p>    <p><strong>🕐</strong> Pn-Pt: 11:00-16:00</p><p><strong>📞</strong> 61 855 10 58</p><p><strong>✉️</strong> galeria@galeria-cechmanowicz.pl</p><p><strong>🌐</strong> <a href="http://www.galeria-cechmanowicz.pl/" target="_blank">http://www.galeria-cechmanowicz.pl/</a></p><img src="https://lh3.googleusercontent.com/p/AF1QipPduQ8Yv-oquVOb5o2FQ9k7eG9FvkJlOiWimO4Q=s1360-w1360-h1020-rw" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br></div></div>`)[0];
+                popup_88016e3e67c1f35d0becf10cd90f5027.setContent(html_a28fe52396a063fb0125d01937a3e5fd);
+            
+        
+
+        marker_6bba71cff9fa046523610305336b98af.bindPopup(popup_88016e3e67c1f35d0becf10cd90f5027)
+        ;
+
+        
+    
+    
+            marker_6bba71cff9fa046523610305336b98af.bindTooltip(
+                `<div>
+                     Galeria Sztuki Współczesnej Jarek Cechmanowicz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6bba71cff9fa046523610305336b98af.setIcon(icon_dd8af4c85be3ef8e9e22025789b6c928);
+            
+    
+            var marker_782b345e1f8fed3efc1044ddbe05aa29 = L.marker(
+                [52.3995746, 16.890998],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_0d109ead8a36bef3b4692493e721fd65 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f23e3b4c021c50e654b82d5c75a36ae2 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_e29f81fb7b76f298302dfb0ff793f200 = $(`<div id="html_e29f81fb7b76f298302dfb0ff793f200" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Galeria Ego</h3>        <p><strong>📍</strong> Stanisława Wyspiańskiego 41, Poznań</p>    <p><strong>🕐</strong> Wt-Pt: 16:00-19:00, Sb: 11:00-14:00</p><p><strong>📞</strong> 510 230 269</p><p><strong>✉️</strong> ego.galeriaego@gmail.com</p><p><strong>🌐</strong> <a href="http://galeriaego.pl/" target="_blank">http://galeriaego.pl/</a></p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsZu91SuZVtdYJl8iqcjiAv91zuT3DBO59LA&s" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://lh3.googleusercontent.com/proxy/iELH5Vb6cobUr_p9sQcWx4A8YpOlThgrS0x1uOLOIjbsWtSbyx_89nOf8sQQt14Kta5VvNcjQD1HEfqUl0Q-oBor4LEAqX5TSR1_-oD0Vb9kK3zsHZfSjCSLkDA4yIkHnMb4dg0" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/GaleriaEGO/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/galeriaego/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_f23e3b4c021c50e654b82d5c75a36ae2.setContent(html_e29f81fb7b76f298302dfb0ff793f200);
+            
+        
+
+        marker_782b345e1f8fed3efc1044ddbe05aa29.bindPopup(popup_f23e3b4c021c50e654b82d5c75a36ae2)
+        ;
+
+        
+    
+    
+            marker_782b345e1f8fed3efc1044ddbe05aa29.bindTooltip(
+                `<div>
+                     Galeria Ego
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_782b345e1f8fed3efc1044ddbe05aa29.setIcon(icon_0d109ead8a36bef3b4692493e721fd65);
+            
+    
+            var marker_b378390cef63a21d06aee38e51939638 = L.marker(
+                [52.4080345, 16.918695],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_ecf6123ab67d01a339f17315b9722968 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_42d5e086a406574128365face6c9087d = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_dd4b1047af8c5edfeed0d466f021c145 = $(`<div id="html_dd4b1047af8c5edfeed0d466f021c145" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Galeria Piekary</h3>        <p><strong>📍</strong> Święty Marcin 82, Poznań</p>    <p><strong>🕐</strong> Pn-Pt: 10:00-18:00</p><p><strong>📞</strong> 61 811 35 55</p><p><strong>✉️</strong> galeriapiekary@galeria-piekary.com.pl</p><p><strong>🌐</strong> <a href="https://galeria-piekary.com.pl/" target="_blank">https://galeria-piekary.com.pl/</a></p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvKsVVgdIbzj-8yIVJXmGfyKxLMDqG52ovJg&s" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://ckzamek.pl/media/gallery/md/DSC_7059__kopia_uCrj5OS.JPG" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/Galeria.Piekary/?eid=ARDF_2N_cU6KBJihIfSZCvc0PpSAz_L7D_kfm-oJoVd1Ngv2BPpUjNRs2pNlpbqY-LeWcLuDEgMpOgY8" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/galeriapiekary/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_42d5e086a406574128365face6c9087d.setContent(html_dd4b1047af8c5edfeed0d466f021c145);
+            
+        
+
+        marker_b378390cef63a21d06aee38e51939638.bindPopup(popup_42d5e086a406574128365face6c9087d)
+        ;
+
+        
+    
+    
+            marker_b378390cef63a21d06aee38e51939638.bindTooltip(
+                `<div>
+                     Galeria Piekary
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b378390cef63a21d06aee38e51939638.setIcon(icon_ecf6123ab67d01a339f17315b9722968);
+            
+    
+            var marker_6356c014b95356da9571782846a9698c = L.marker(
+                [52.4007501, 16.9062487],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_89e3c1c471f748898b1a55b2bb65c324 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c8297fc62579c1534c8d503b6b0becc8 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_a6fd66d0604d915d68ced8dab5026a45 = $(`<div id="html_a6fd66d0604d915d68ced8dab5026a45" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Brodziak Gallery</h3>        <p><strong>📍</strong> Głogowska 18, Poznań</p>    <p><strong>🕐</strong> Pn-Sb: 11:00-18:00</p><p><strong>📞</strong> 795 770 771</p><p><strong>✉️</strong> gallery@szymonbrodziak.com</p><p><strong>🌐</strong> <a href="https://szymonbrodziak.com/" target="_blank">https://szymonbrodziak.com/</a></p><img src="https://szymonbrodziak.com/media/wysiwyg/Brodziak_Gallery_Logo_miniatura_1..jpg" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://ocdn.eu/pulscms/MDA_/6c2d5a5398690ce73b2b351f7bf80db4.jpg" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/BrodziakGallery/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/brodziakgallery/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_c8297fc62579c1534c8d503b6b0becc8.setContent(html_a6fd66d0604d915d68ced8dab5026a45);
+            
+        
+
+        marker_6356c014b95356da9571782846a9698c.bindPopup(popup_c8297fc62579c1534c8d503b6b0becc8)
+        ;
+
+        
+    
+    
+            marker_6356c014b95356da9571782846a9698c.bindTooltip(
+                `<div>
+                     Brodziak Gallery
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6356c014b95356da9571782846a9698c.setIcon(icon_89e3c1c471f748898b1a55b2bb65c324);
+            
+    
+            var marker_9d169394e961a89f37709bd63836f2f2 = L.marker(
+                [52.3999527, 16.9062423],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_d44d82e1dffdd73114662bd83f8e5e64 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce933e749791965fd5dc590b9082abd5 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_bca103cc677b4c78b3cd0bd24f6a8527 = $(`<div id="html_bca103cc677b4c78b3cd0bd24f6a8527" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Galeria Muzalewska</h3>        <p><strong>📍</strong> Głogowska 29, Poznań</p>    <p><strong>📞</strong> 603 399 718</p><p><strong>✉️</strong> galeriamuzalewska@witryna.pl</p><p><strong>🌐</strong> <a href="https://galeriamuzalewska.pl/" target="_blank">https://galeriamuzalewska.pl/</a></p><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/p/Galeria-Muzalewska-100057505626874/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/galeriamuzalewska/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_ce933e749791965fd5dc590b9082abd5.setContent(html_bca103cc677b4c78b3cd0bd24f6a8527);
+            
+        
+
+        marker_9d169394e961a89f37709bd63836f2f2.bindPopup(popup_ce933e749791965fd5dc590b9082abd5)
+        ;
+
+        
+    
+    
+            marker_9d169394e961a89f37709bd63836f2f2.bindTooltip(
+                `<div>
+                     Galeria Muzalewska
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9d169394e961a89f37709bd63836f2f2.setIcon(icon_d44d82e1dffdd73114662bd83f8e5e64);
+            
+    
+            var marker_5f7ab5f0e2bf02fde1708883d65e1c66 = L.marker(
+                [52.40744, 16.9370877],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_d3a61deb69ce43ece23977bac95cde1c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e2b46ebb1cfe177bc0aa9e29f3c06ca5 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_bba9946af61b2befd204cc0a0e7b9f37 = $(`<div id="html_bba9946af61b2befd204cc0a0e7b9f37" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Rodríguez Gallery</h3>        <p><strong>📍</strong> Wodna 13, Poznań</p>    <p><strong>🕐</strong> Śr-Sb: 13:00-18:00</p><p><strong>📞</strong> 606 908 087</p><p><strong>✉️</strong> agata@rodriguezgallery.com</p><p><strong>🌐</strong> <a href="https://rodriguezgallery.com/pl/" target="_blank">https://rodriguezgallery.com/pl/</a></p><img src="https://rodriguezgallery.com/wp-content/uploads/2023/12/Logo_resized.jpeg" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJW9_uvuV4RUmBTkRB6JLeRBEEGui3v0_0rQ&s" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/Rodriguezgallery/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/rodriguez_foundation/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_e2b46ebb1cfe177bc0aa9e29f3c06ca5.setContent(html_bba9946af61b2befd204cc0a0e7b9f37);
+            
+        
+
+        marker_5f7ab5f0e2bf02fde1708883d65e1c66.bindPopup(popup_e2b46ebb1cfe177bc0aa9e29f3c06ca5)
+        ;
+
+        
+    
+    
+            marker_5f7ab5f0e2bf02fde1708883d65e1c66.bindTooltip(
+                `<div>
+                     Rodríguez Gallery
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5f7ab5f0e2bf02fde1708883d65e1c66.setIcon(icon_d3a61deb69ce43ece23977bac95cde1c);
+            
+    
+            var marker_78137fe23e009a8b79b0190cb2b576ec = L.marker(
+                [52.4094827, 16.93342],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_aa63d7961e077f9731a6ff1ba74ad7d6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_14b208efd8b38b28d21e38868fefe68f = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_5c2d7d3a3e61228da94c4d3e82d67298 = $(`<div id="html_5c2d7d3a3e61228da94c4d3e82d67298" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Galeria Jerzego Piotrowicza Pod Koroną</h3>        <p><strong>📍</strong> Kramarska 3, Poznań</p>    <p><strong>🕐</strong> Wt-Sb: 12:00-18:00, Nd: 12:00-16:00</p><p><strong>📞</strong> 728 916 753</p><p><strong>✉️</strong> galeriajerzegopiotrowicza@gmail.com</p><p><strong>🌐</strong> <a href="https://galeriajerzegopiotrowicza.pl/" target="_blank">https://galeriajerzegopiotrowicza.pl/</a></p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuEhKiznK_UAyb7bp1PTOVAPvCLW_7ZDo8zQ&s" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nojkfPr2pAlphJqPMXNh6f5K1gYqZXLKhLO_ktCrCBWQNaRuxaElwPf3TrJi2caOVVuLc5uutVey-0w13v6ayLp5xp9BzOzzLl5B2yS-U8JoShCZO4JRXiz1B8bux2Rle3eJ-W6=s1360-w1360-h1020-rw" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/galeriajerzegopiotoriwczapodkorona/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/galeriapodkorona/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_14b208efd8b38b28d21e38868fefe68f.setContent(html_5c2d7d3a3e61228da94c4d3e82d67298);
+            
+        
+
+        marker_78137fe23e009a8b79b0190cb2b576ec.bindPopup(popup_14b208efd8b38b28d21e38868fefe68f)
+        ;
+
+        
+    
+    
+            marker_78137fe23e009a8b79b0190cb2b576ec.bindTooltip(
+                `<div>
+                     Galeria Jerzego Piotrowicza Pod Koroną
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_78137fe23e009a8b79b0190cb2b576ec.setIcon(icon_aa63d7961e077f9731a6ff1ba74ad7d6);
+            
+    
+            var marker_cd4858bb4bb7a6e4bda056161f5ee9d9 = L.marker(
+                [52.4102703, 16.9242845],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_d68fa0eda58aa69bd50e33b5f7cef7c1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec0693403b610d7a2ef45372b8da400c = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_f99cb6265205394e13cc7f3199a5e72e = $(`<div id="html_f99cb6265205394e13cc7f3199a5e72e" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Galeria Centrala</h3>        <p><strong>📍</strong> plac Ratajskiego 6a, Poznań</p>    <p><strong>🕐</strong> Śr: 18:00-19:00, Czw-Pt: 15:00-19:00, Sb: 11:00-16:00</p><p><strong>📞</strong> 579 643 060</p><p><strong>✉️</strong> contact@centrala.art</p><p><strong>🌐</strong> <a href="https://www.centrala.art/" target="_blank">https://www.centrala.art/</a></p><img src="https://www.centrala.art/wp-content/uploads/2019/11/centrala_poziom.png" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://nocmuzeow.poznan.pl/content/uploads/2023/04/Galeria_Centrala_Pl_Ratajskiego_6A-scaled.jpg" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/CENTRALA.art/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/centrala.art/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_ec0693403b610d7a2ef45372b8da400c.setContent(html_f99cb6265205394e13cc7f3199a5e72e);
+            
+        
+
+        marker_cd4858bb4bb7a6e4bda056161f5ee9d9.bindPopup(popup_ec0693403b610d7a2ef45372b8da400c)
+        ;
+
+        
+    
+    
+            marker_cd4858bb4bb7a6e4bda056161f5ee9d9.bindTooltip(
+                `<div>
+                     Galeria Centrala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cd4858bb4bb7a6e4bda056161f5ee9d9.setIcon(icon_d68fa0eda58aa69bd50e33b5f7cef7c1);
+            
+    
+            var marker_bc8499e47b17acad02d68e8d37576c38 = L.marker(
+                [52.408202, 16.9258418],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_3bfcdc0541ec534b7ddaf352a72dd1a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4d68fb0a32cfa63728dd00c8f09a8faf = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_8d80a85b55d5bc86ce138284137bce84 = $(`<div id="html_8d80a85b55d5bc86ce138284137bce84" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Fotoplastykon Poznański</h3>        <p><strong>📍</strong> Ratajczaka 44, Poznań</p>    <p><strong>🕐</strong> Pn-Pt: 10:00-18:00, Sb:10:00-17:00</p><p><strong>📞</strong> 61 854 07 52</p><p><strong>✉️</strong> fotoplastykon@fotoplastykon.com.pl</p><p><strong>🌐</strong> <a href="https://www.fotoplastykon.com.pl/?page_id=5052" target="_blank">https://www.fotoplastykon.com.pl/?page_id=5052</a></p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvtO1MA9PvUqhkzUGGrixbqY9Pob77fSFVJg&s" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://www.fotoplastykon.com.pl/wp-content/uploads/2016/01/DSCF8102-672x372.jpg" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/fotoplastykonpoznanski/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/explore/locations/2327840907228939/fotoplastykon-poznanski/?__d=1" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_4d68fb0a32cfa63728dd00c8f09a8faf.setContent(html_8d80a85b55d5bc86ce138284137bce84);
+            
+        
+
+        marker_bc8499e47b17acad02d68e8d37576c38.bindPopup(popup_4d68fb0a32cfa63728dd00c8f09a8faf)
+        ;
+
+        
+    
+    
+            marker_bc8499e47b17acad02d68e8d37576c38.bindTooltip(
+                `<div>
+                     Fotoplastykon Poznański
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bc8499e47b17acad02d68e8d37576c38.setIcon(icon_3bfcdc0541ec534b7ddaf352a72dd1a2);
+            
+    
+            var marker_a446ec523f39652b7ac8f991addd5a74 = L.marker(
+                [52.4061411, 16.9243226],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_fd0f41c46471c05523ab93bf0a131fde = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_10a79bd4391753a2bcf7f8cb50ccf4cf = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_b2b64e2d6b0553dd89868e7db50a427b = $(`<div id="html_b2b64e2d6b0553dd89868e7db50a427b" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Galeria Jak</h3>        <p><strong>📍</strong> Święty Marcin 37, Poznań</p>    <p><strong>📞</strong> 693 083 144</p><p><strong>✉️</strong> galeriajak@gmail.com</p><p><strong>🌐</strong> <a href="https://galeriajak.pl/" target="_blank">https://galeriajak.pl/</a></p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6pDSsSLhuapU8L7ZMFbGHztKpJ_K1jDUvmA&s" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://lh3.googleusercontent.com/p/AF1QipMUVYHAv53AgxHswtqh9roGEzhcOuSFiKZBtHUc=s1360-w1360-h1020-rw" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/galeriajak/?locale=pl_PL" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/galeria_jak/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a> | <a href="https://www.youtube.com/channel/UCK8QHZYjp2P9A_H4yYk276g" target="_blank" style="color: #FF0000; text-decoration: none;"><i class="fa-brands fa-youtube fa-beat"></i></a></p></div></div>`)[0];
+                popup_10a79bd4391753a2bcf7f8cb50ccf4cf.setContent(html_b2b64e2d6b0553dd89868e7db50a427b);
+            
+        
+
+        marker_a446ec523f39652b7ac8f991addd5a74.bindPopup(popup_10a79bd4391753a2bcf7f8cb50ccf4cf)
+        ;
+
+        
+    
+    
+            marker_a446ec523f39652b7ac8f991addd5a74.bindTooltip(
+                `<div>
+                     Galeria Jak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a446ec523f39652b7ac8f991addd5a74.setIcon(icon_fd0f41c46471c05523ab93bf0a131fde);
+            
+    
+            var marker_09384c171d6b9c46a3faa64649ad7431 = L.marker(
+                [52.3854722, 16.8718454],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_cdcc78d79e64f0ea9a8ebaa7cbf69eeb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_739f505c36a48925e679339538c184b7 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_3b86077542e70754e0339c71c84fada9 = $(`<div id="html_3b86077542e70754e0339c71c84fada9" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Kolor i kropka</h3>        <p><strong>📍</strong> Rembertowska 15, Poznań</p>    <p><strong>📞</strong> 663 786 333</p><p><strong>✉️</strong> studio@kolorikropka.pl</p><p><strong>🌐</strong> <a href="https://www.kolorikropka.pl/" target="_blank">https://www.kolorikropka.pl/</a></p><img src="https://www.kolorikropka.pl/wp-content/uploads/2023/04/kolor-i-kropka_logo_czarne.png" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://www.kolorikropka.pl/wp-content/uploads/2023/05/DSC_0442-scaled.jpg" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/kolorikropkastudio/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/kolor_i_kropka/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_739f505c36a48925e679339538c184b7.setContent(html_3b86077542e70754e0339c71c84fada9);
+            
+        
+
+        marker_09384c171d6b9c46a3faa64649ad7431.bindPopup(popup_739f505c36a48925e679339538c184b7)
+        ;
+
+        
+    
+    
+            marker_09384c171d6b9c46a3faa64649ad7431.bindTooltip(
+                `<div>
+                     Kolor i kropka
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_09384c171d6b9c46a3faa64649ad7431.setIcon(icon_cdcc78d79e64f0ea9a8ebaa7cbf69eeb);
+            
+    
+            var marker_4cd840111e590b1e70dad7bb040f9789 = L.marker(
+                [52.4067449, 16.9379904],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_96104614bd76cdfb8c91f6f52df5cc7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_51eb0a0b40fce733be2463769a5081c4 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_27817906898864c8e1df57055b91762f = $(`<div id="html_27817906898864c8e1df57055b91762f" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Galeria ZACNIE</h3>        <p><strong>📍</strong> Garbary 50, Poznań</p>    <p><strong>🕐</strong> Wt-Śr: 12:00-18:00</p><p><strong>✉️</strong> galeriazacnie@gmail.com</p><p><strong>🌐</strong> <a href="https://galeriazacnie.pl/" target="_blank">https://galeriazacnie.pl/</a></p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwct3_JK10Hk99hTzbxjMihZi4Y0dk2JK7Hw&s" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://galeriazacnie.pl//content/uploads/2021/05/2019-11-22-zacnie-wystaw-20-2020-24.jpg" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/galeriazacnie/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/galeriazacnie/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_51eb0a0b40fce733be2463769a5081c4.setContent(html_27817906898864c8e1df57055b91762f);
+            
+        
+
+        marker_4cd840111e590b1e70dad7bb040f9789.bindPopup(popup_51eb0a0b40fce733be2463769a5081c4)
+        ;
+
+        
+    
+    
+            marker_4cd840111e590b1e70dad7bb040f9789.bindTooltip(
+                `<div>
+                     Galeria ZACNIE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4cd840111e590b1e70dad7bb040f9789.setIcon(icon_96104614bd76cdfb8c91f6f52df5cc7e);
+            
+    
+            var marker_1a6dcf689b23cf38993df5e8bd1ac85d = L.marker(
+                [52.4044446, 16.9144235],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_9b74940b98b24d220ebb97c3a21b0819 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_852588ae191295a509921fd46bcc4b5d = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_1c4daa7277e1392f178c26eb0776c57c = $(`<div id="html_1c4daa7277e1392f178c26eb0776c57c" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Galeria Szczur</h3>        <p><strong>📍</strong> Składowa 11, Poznań</p>    <p><strong>🕐</strong> Pt-Sb: 17:00-19:00</p><p><strong>📞</strong> 698 305 628</p><p><strong>✉️</strong> galeriaszczur@gmail.com</p><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/galeriaszczur/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/galeria_szczur/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_852588ae191295a509921fd46bcc4b5d.setContent(html_1c4daa7277e1392f178c26eb0776c57c);
+            
+        
+
+        marker_1a6dcf689b23cf38993df5e8bd1ac85d.bindPopup(popup_852588ae191295a509921fd46bcc4b5d)
+        ;
+
+        
+    
+    
+            marker_1a6dcf689b23cf38993df5e8bd1ac85d.bindTooltip(
+                `<div>
+                     Galeria Szczur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1a6dcf689b23cf38993df5e8bd1ac85d.setIcon(icon_9b74940b98b24d220ebb97c3a21b0819);
+            
+    
+            var marker_f6164863a7202694bc3fb8eec981616d = L.marker(
+                [52.4082054, 16.9384511],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_79dcaa4527e2bef052e4115311c7bcca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_216aba637399f807d21fde81b5f4588e = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_a432afc6657b822ab85734153ab82e97 = $(`<div id="html_a432afc6657b822ab85734153ab82e97" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Pyramida Gallery</h3>        <p><strong>📍</strong> Garbary 64, Poznań</p>    <p><strong>🕐</strong> Wt-Sb: 12:00-18:00, Nd:12:00-17:00</p><p><strong>📞</strong> 698 746 423</p><p><strong>✉️</strong> galeria@pyramidahub.com</p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9n1H18Yw8lGY-j1qDQ-JmPh8ilmPu6A8QHw&s" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://lh3.googleusercontent.com/p/AF1QipNvuUS4FWdWDcVGKFBJlHLuHyVKbb4D8rPdPH1w=s1360-w1360-h1020-rw" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/PyramidaGallery/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/pyramidagallery/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_216aba637399f807d21fde81b5f4588e.setContent(html_a432afc6657b822ab85734153ab82e97);
+            
+        
+
+        marker_f6164863a7202694bc3fb8eec981616d.bindPopup(popup_216aba637399f807d21fde81b5f4588e)
+        ;
+
+        
+    
+    
+            marker_f6164863a7202694bc3fb8eec981616d.bindTooltip(
+                `<div>
+                     Pyramida Gallery
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f6164863a7202694bc3fb8eec981616d.setIcon(icon_79dcaa4527e2bef052e4115311c7bcca);
+            
+    
+            var marker_5ac8b55ec47797b669d6bdf2520adca5 = L.marker(
+                [52.4067868, 16.9201919],
+                {
+}
+            ).addTo(map_c68d0438a9b023238c2dbd7da2f2c6fc);
+        
+    
+            var icon_96c69958a84704f17222ecbe29a8054f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_534c3fdc0acefe9431ae5f76be5049cc = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_dcf402d0c4bab579fd599e5b2e5942cb = $(`<div id="html_dcf402d0c4bab579fd599e5b2e5942cb" style="width: 100.0%; height: 100.0%;">    <div style="width: 250px;">        <h3 style="margin: 0 0 10px 0; color: #333;">Łazęga Poznańska</h3>        <p><strong>📍</strong> Święty Marcin 75</p>    <p><strong>🕐</strong> Pn-Nd: 16:00-20:00</p><p><strong>📞</strong> 602 198 601</p><img src="https://offcinema.ckzamek.pl/media/gallery/sm/azega.png" style="width: 80px; height: auto; margin: 5px 0; border-radius: 5px;"><br><img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrTOZhkXxIo_hnu7tU9A7jPBV8wuyr1dQ7j-UkJv4enQ6JG6oYmW1-x_WWQjp0FBRxQW9Ie3P90fg0F5cfSR2Se_KRd2zxIPB1mVDvt4RqA1PoTteE43f3goQUa3xasOe2rYwA=s1360-w1360-h1020-rw" style="width: 200px; height: auto; margin: 5px 0; border-radius: 5px;"><br><p><strong>🔗 Social Media:</strong><br><a href="https://www.facebook.com/lazegapoznanska/" target="_blank" style="color: #4267B2; text-decoration: none;"><i class="fa-brands fa-facebook fa-beat"></i></a> | <a href="https://www.instagram.com/lazegapoznanska/" target="_blank" style="color:#C13584;width: 200px; height: 200px; text-decoration: none;"><i class="fa-brands fa-instagram fa-beat"></i></a></p></div></div>`)[0];
+                popup_534c3fdc0acefe9431ae5f76be5049cc.setContent(html_dcf402d0c4bab579fd599e5b2e5942cb);
+            
+        
+
+        marker_5ac8b55ec47797b669d6bdf2520adca5.bindPopup(popup_534c3fdc0acefe9431ae5f76be5049cc)
+        ;
+
+        
+    
+    
+            marker_5ac8b55ec47797b669d6bdf2520adca5.bindTooltip(
+                `<div>
+                     Łazęga Poznańska
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5ac8b55ec47797b669d6bdf2520adca5.setIcon(icon_96c69958a84704f17222ecbe29a8054f);
+            
+</script>
+</html>
