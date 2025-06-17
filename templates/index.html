@@ -15,48 +15,91 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
 </head>
 <body class="background">
+
 <!-- Nawigacja główna -->
 <nav class="bg-white/90 hover:bg-white transition duration-300 sticky-menu-nav border-2 border-turquoise mb-0 pb-0">
   <div class="max-w-screen-xl mx-auto flex items-center justify-between px-8 py-4">
 
-    <!-- Logo -->
-    <div class="w-1/4 flex justify-start">
+    <div class="w-1/6 flex justify-start">
       <a href="/">
         <img src="{{ url_for('static', filename='images/favicon.png') }}" alt="Logo" class="h-16 w-auto">
       </a>
     </div>
 
-    <!-- Linki -->
-<ul class="w-1/2 flex justify-center space-x-16">
-  <li class="relative group">
-    <a href="#" class="text-turquoise hover:text-light-rose transition duration-300 flex items-center">
-      Komiks
-      <svg class="ml-1 w-4 h-4 fill-current text-turquoise group-hover:text-light-rose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.25 7.75L10 12.5l4.75-4.75z"/></svg>
-    </a>
-    <ul
-      class="absolute left-0 top-full mt-0 w-40 bg-white border border-turquoise rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 z-50"
-      style="margin-top: 0 !important;"
-    >
-      <li><a href="#artjam" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">artjam</a></li>
-      <li><a href="#cdv" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">cdv</a></li>
-      <li><a href="#blackwhite" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">blackwhite</a></li>
-      <li><a href="#random" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">random</a></li>
-      <li><a href="#normal" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">normal</a></li>
+    <div class="md:hidden">
+      <button id="hamburger-button" class="text-turquoise hover:text-light-rose focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="hidden md:flex w-3/5 justify-center space-x-16">
+      <li class="relative group">
+        <a href="#" class="text-turquoise hover:text-light-rose transition duration-300 flex items-center">
+          Komiks
+          <svg class="ml-1 w-4 h-4 fill-current text-turquoise group-hover:text-light-rose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.25 7.75L10 12.5l4.75-4.75z"/></svg>
+        </a>
+        <ul
+          class="absolute left-0 top-full mt-0 w-40 bg-white border border-turquoise rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 z-50"
+          style="margin-top: 0 !important;"
+        >
+          <li><a href="#artjam" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">artjam</a></li>
+          <li><a href="#cdv" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">cdv</a></li>
+          <li><a href="#blackwhite" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">blackwhite</a></li>
+          <li><a href="#random" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">random</a></li>
+          <li><a href="#normal" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">normal</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="text-turquoise hover:text-light-rose transition duration-300">Mapa</a></li>
+      <li><a href="#" class="text-turquoise hover:text-light-rose transition duration-300">Mem</a></li>
+      <li><a href="#" class="text-turquoise hover:text-light-rose transition duration-300">Style</a></li>
+      <li><a href="#faq" class="text-turquoise hover:text-light-rose transition duration-300">FAQ</a></li>
+      <li><a href="#about" class="text-turquoise hover:text-light-rose transition duration-300 whitespace-nowrap">O nas</a></li>
+      <li><a href="#contact" class="text-turquoise hover:text-light-rose transition duration-300">Kontakt</a></li>
     </ul>
-  </li>
-  <li><a href="#" class="text-turquoise hover:text-light-rose transition duration-300">Mapa</a></li>
-  <li><a href="#" class="text-turquoise hover:text-light-rose transition duration-300">Mem</a></li>
-  <li><a href="#" class="text-turquoise hover:text-light-rose transition duration-300">Style</a></li>
-  <li><a href="#about" class="text-turquoise hover:text-light-rose transition duration-300">O nas</a></li>
-  <li><a href="#contact" class="text-turquoise hover:text-light-rose transition duration-300">Kontakt</a></li>
-</ul>
 
-
-    <!-- Pusty placeholder dla równowagi -->
-    <div class="w-1/4"></div>
+    <div class="w-1/5 hidden md:block"></div>
 
   </div>
+
+  <div id="mobile-menu" class="hidden md:hidden">
+    <ul class="flex flex-col items-center py-4 space-y-4 bg-white border-t border-turquoise">
+      <li class="relative group w-full text-center">
+        <a href="#" class="text-turquoise hover:text-light-rose transition duration-300 flex items-center justify-center">
+          Komiks
+          <svg class="ml-1 w-4 h-4 fill-current text-turquoise group-hover:text-light-rose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.25 7.75L10 12.5l4.75-4.75z"/></svg>
+        </a>
+        <ul class="mt-2 w-full bg-white border-t border-turquoise shadow-lg group-hover:block hidden">
+          <li><a href="#artjam" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">artjam</a></li>
+          <li><a href="#cdv" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">cdv</a></li>
+          <li><a href="#blackwhite" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">blackwhite</a></li>
+          <li><a href="#random" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">random</a></li>
+          <li><a href="#normal" class="block px-4 py-2 text-turquoise hover:bg-turquoise hover:text-white">normal</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="text-turquoise hover:text-light-rose transition duration-300">Mapa</a></li>
+      <li><a href="#" class="text-turquoise hover:text-light-rose transition duration-300">Mem</a></li>
+      <li><a href="#" class="text-turquoise hover:text-light-rose transition duration-300">Style</a></li>
+      <li><a href="#faq" class="text-turquoise hover:text-light-rose transition duration-300">FAQ</a></li>
+      <li><a href="#about" class="text-turquoise hover:text-light-rose transition duration-300 whitespace-nowrap">O nas</a></li>
+      <li><a href="#contact" class="text-turquoise hover:text-light-rose transition duration-300">Kontakt</a></li>
+    </ul>
+  </div>
 </nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerButton = document.getElementById('hamburger-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (hamburgerButton && mobileMenu) {
+      hamburgerButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
 <main>
 <!-- Mapa    -->
 <div id="map" class="w-full h-[1000px]" style="height: 800px; ">
@@ -76,19 +119,219 @@
   </iframe>
 </div>
 
+  <section id="faq" class="bg-turquoise text-white py-16">
+  <div class="max-w-screen-xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">FAQ – Najczęściej zadawane pytania</h2>
+
+      <!-- Pytanie 1 -->
+      <div class="bg-turquoise border border-white rounded-lg overflow-hidden mb-4">
+        <button class="w-full group flex items-center px-6 py-4 text-gray-100 hover:text-white font-semibold text-lg transition-colors duration-300 faq-toggle cursor-pointer" type="button">
+          <span class="flex-grow text-left block w-full pointer-events-auto">Jak znaleźć najbliższą galerię na mapie?</span>
+          <span class="flex items-center pointer-events-none">
+            <svg class="w-4 h-4 transition-transform duration-300 arrow-icon group-[.open]:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="hidden px-6 pb-4 text-white faq-answer">
+          Po prostu przejdź do sekcji "Mapa" na naszej stronie.
+        </div>
+      </div>
+
+      <!-- Pytanie 2 -->
+      <div class="bg-turquoise border border-white rounded-lg overflow-hidden mb-4">
+        <button class="w-full group flex items-center px-6 py-4 text-gray-100 hover:text-white font-semibold text-lg transition-colors duration-300 faq-toggle cursor-pointer" type="button">
+          <span class="flex-grow text-left block w-full pointer-events-auto">Czy mogę filtrować galerie według ich specjalizacji lub typu sztuki?</span>
+          <span class="flex items-center pointer-events-none">
+            <svg class="w-4 h-4 transition-transform duration-300 arrow-icon group-[.open]:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="hidden px-6 pb-4 text-white faq-answer">
+          Na ten moment mapa pokazuje wszystkie dostępne galerie. Pracujemy nad wprowadzeniem funkcji filtrowania w przyszłości, aby ułatwić wyszukiwanie galerii o konkretnym profilu.
+        </div>
+      </div>
+
+      <!-- Pytanie 3 -->
+      <div class="bg-turquoise border border-white rounded-lg overflow-hidden mb-4">
+        <button class="w-full group flex items-center px-6 py-4 text-gray-100 hover:text-white font-semibold text-lg transition-colors duration-300 faq-toggle cursor-pointer" type="button">
+          <span class="flex-grow text-left block w-full pointer-events-auto">Skąd pochodzą informacje o godzinach otwarcia i danych kontaktowych galerii?</span>
+          <span class="flex items-center pointer-events-none">
+            <svg class="w-4 h-4 transition-transform duration-300 arrow-icon group-[.open]:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="hidden px-6 pb-4 text-white faq-answer">
+          Wszystkie dane, takie jak godziny otwarcia, adresy, telefony i adresy e-mail, pochodzą bezpośrednio od galerii lub są zbierane z oficjalnie dostępnych źródeł. Staramy się je regularnie aktualizować.
+        </div>
+      </div>
+
+      <!-- Pytanie 4 -->
+      <div class="bg-turquoise border border-white rounded-lg overflow-hidden mb-4">
+        <button class="w-full group flex items-center px-6 py-4 text-gray-100 hover:text-white font-semibold text-lg transition-colors duration-300 faq-toggle cursor-pointer" type="button">
+          <span class="flex-grow text-left block w-full pointer-events-auto">Czy na stronie znajdę aktualne wydarzenia i wystawy w galeriach?</span>
+          <span class="flex items-center pointer-events-none">
+            <svg class="w-4 h-4 transition-transform duration-300 arrow-icon group-[.open]:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="hidden px-6 pb-4 text-white faq-answer">
+          Tak, w sekcji poniżej mapy znajdziesz osadzoną ramkę z witryną EchoPoznan, gdzie możesz sprawdzić najnowsze informacje o wystawach, wernisażach i innych wydarzeniach artystycznych w Poznaniu.
+        </div>
+      </div>
+
+      <!-- Pytanie 5 -->
+      <div class="bg-turquoise border border-white rounded-lg overflow-hidden mb-4">
+        <button class="w-full group flex items-center px-6 py-4 text-gray-100 hover:text-white font-semibold text-lg transition-colors duration-300 faq-toggle cursor-pointer" type="button">
+          <span class="flex-grow text-left block w-full pointer-events-auto">Co zrobić, jeśli zauważę, że dane galerii (np. godziny otwarcia) są nieaktualne?</span>
+          <span class="flex items-center pointer-events-none">
+            <svg class="w-4 h-4 transition-transform duration-300 arrow-icon group-[.open]:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="hidden px-6 pb-4 text-white faq-answer">
+        Będziemy wdzięczni za każdą informację o nieścisłościach! Prosimy o kontakt poprzez nasz formularz kontaktowy, podając, które dane wymagają aktualizacji.
+        </div>
+      </div>
+
+      <!-- Pytanie 6 -->
+      <div class="bg-turquoise border border-white rounded-lg overflow-hidden mb-4">
+        <button class="w-full group flex items-center px-6 py-4 text-gray-100 hover:text-white font-semibold text-lg transition-colors duration-300 faq-toggle cursor-pointer" type="button">
+          <span class="flex-grow text-left block w-full pointer-events-auto">Czy mogę zgłosić nową galerię do dodania na mapę?</span>
+          <span class="flex items-center pointer-events-none">
+            <svg class="w-4 h-4 transition-transform duration-300 arrow-icon group-[.open]:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="hidden px-6 pb-4 text-white faq-answer">
+          Tak, oczywiście! Jeśli znasz galerię w Poznaniu, której nie ma na naszej mapie, skontaktuj się z nami poprzez telefon/mail. Podaj jak najwięcej szczegółów (nazwa, adres, strona internetowa), a my postaramy się ją dodać.
+        </div>
+      </div>
+
+      <!-- Pytanie 7 -->
+      <div class="bg-turquoise border border-white rounded-lg overflow-hidden mb-4">
+        <button class="w-full group flex items-center px-6 py-4 text-gray-100 hover:text-white font-semibold text-lg transition-colors duration-300 faq-toggle cursor-pointer" type="button">
+          <span class="flex-grow text-left block w-full pointer-events-auto">Czy na mapie są tylko galerie sztuki?</span>
+          <span class="flex items-center pointer-events-none">
+            <svg class="w-4 h-4 transition-transform duration-300 arrow-icon group-[.open]:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="hidden px-6 pb-4 text-white faq-answer">
+          Nasza mapa skupia się głównie na galeriach sztuki, ale staramy się uwzględniać również inne miejsca związane z kulturą i sztuką, które mogą być interesujące dla naszych użytkowników.
+        </div>
+      </div>
+
+      <!-- Pytanie 8 -->
+      <div class="bg-turquoise border border-white rounded-lg overflow-hidden mb-4">
+        <button class="w-full group flex items-center px-6 py-4 text-gray-100 hover:text-white font-semibold text-lg transition-colors duration-300 faq-toggle cursor-pointer" type="button">
+          <span class="flex-grow text-left block w-full pointer-events-auto"> Czy mogę kliknąć na galerię na mapie, aby uzyskać więcej informacji?</span>
+          <span class="flex items-center pointer-events-none">
+            <svg class="w-4 h-4 transition-transform duration-300 arrow-icon group-[.open]:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="hidden px-6 pb-4 text-white faq-answer">
+          Tak, po kliknięciu na znacznik galerii na interaktywnej mapie, powinien pojawić się dymek lub panel z podstawowymi informacjami, takimi jak nazwa, adres i link do strony internetowej galerii.
+        </div>
+      </div>
+
+      <!-- Pytanie 9 -->
+      <div class="bg-turquoise border border-white rounded-lg overflow-hidden mb-4">
+        <button class="w-full group flex items-center px-6 py-4 text-gray-100 hover:text-white font-semibold text-lg transition-colors duration-300 faq-toggle cursor-pointer" type="button">
+          <span class="flex-grow text-left block w-full pointer-events-auto">Czy mogę uzyskać wskazówki dojazdu do wybranej galerii?</span>
+          <span class="flex items-center pointer-events-none">
+            <svg class="w-4 h-4 transition-transform duration-300 arrow-icon group-[.open]:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="hidden px-6 pb-4 text-white faq-answer">
+           Interaktywna mapa, którą osadziliśmy (zapewne bazująca na Google Maps lub Leaflet), często oferuje opcję uzyskania wskazówek dojazdu po kliknięciu na lokalizację. Poszukaj ikony z kierunkiem lub opcji "Wyznacz trasę"
+        </div>
+      </div>
+
+      <!-- Pytanie 10 -->
+      <div class="bg-turquoise border border-white rounded-lg overflow-hidden mb-4">
+        <button class="w-full group flex items-center px-6 py-4 text-gray-100 hover:text-white font-semibold text-lg transition-colors duration-300 faq-toggle cursor-pointer" type="button">
+          <span class="flex-grow text-left block w-full pointer-events-auto">Czy galerie są otwarte w weekendy?</span>
+          <span class="flex items-center pointer-events-none">
+            <svg class="w-4 h-4 transition-transform duration-300 arrow-icon group-[.open]:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div class="hidden px-6 pb-4 text-white faq-answer">
+          Godziny otwarcia różnią się w zależności od galerii. Na stronie każdej galerii na mapie lub w szczegółach listy, jeśli taka zostanie dodana, znajdziesz dokładne informacje o ich godzinach działania, w tym w weekendy.
+        </div>
+      </div>
+  </div>
+
+<script>
+  document.querySelectorAll('.faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      const isOpen = !answer.classList.contains('hidden');
+
+      // Zamknij wszystkie odpowiedzi i zresetuj strzałki
+      document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+      document.querySelectorAll('.faq-toggle').forEach(btn => {
+        btn.classList.remove('text-white');
+        btn.classList.add('text-white/70');
+        const icon = btn.querySelector('.arrow-icon');
+        if (icon) {
+          icon.classList.remove('rotate-180');
+          icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />`;
+        }
+      });
+
+      // Otwórz kliknięte
+      if (!isOpen) {
+        answer.classList.remove('hidden');
+        button.classList.remove('text-white/70');
+        button.classList.add('text-white');
+        const icon = button.querySelector('.arrow-icon');
+        if (icon) {
+          icon.classList.add('rotate-180');
+          icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />`; // Strzałka w górę
+        }
+      }
+    });
+  });
+</script>
+</section>
+
+
 <!--  O nas-->
   <section id="about" class="bg-white py-16">
   <div class="max-w-screen-xl mx-auto px-6">
     <h2 class="text-3xl font-bold text-red-rose mb-6 text-center">O nas</h2>
     <div class="text-gray-800 space-y-4 text-justify">
-      <p>We are a club that wants to develop the passions of all its members, as well as to work within the broad field of artistic creation. We support our members by broadening their interests in the field of fine arts with a particular focus on issues in the area of printmaking.</p>
-      <p>Art Jam is made up of people who are not only very sensitive to the reality around them, but above all create. In addition to meeting in classes within the walls of the academy, we organize trips to conferences, exhibitions and other events such as open-air workshops and festivals. We hold educational meetings with cultural activists and exhibition organizers, and we broaden our members' knowledge by participating in initiatives that contribute to their professional development.</p>
-      <p>We created the club because we want to acquire new skills, but above all because we are open to new challenges. We are active in many fields, from painting to the so-called new media of artistic expression. We also gain experience through participation in various national and international competitions.</p>
-      <p>Art Jam operates as an independent project, and each member has the same rights and responsibilities, opportunities for expression and participation in the projects carried out. Anyone who is interested in self-development and action in the field of contemporary art in the broadest sense of the term is welcome to join the club.</p>
-      <p>We work in techniques such as graphics, photography, drawing, painting, animation or film.</p>
-      <p>Members of the club present the results of their work in front of an audience, both live and in a virtual space, learn to work in a team and cooperate with external organizations.</p>
-      <p>We are students from different faculties who share a common passion. Our goals are to promote artistic activity within the walls of the university and to network with representatives of the art world.</p>
-      <p>Although we are a young organization, we try our best to help our members develop their interests.</p>
+<p>Jesteśmy klubem, który pragnie rozwijać pasje wszystkich swoich członków, a także działać w szeroko pojętym obszarze twórczości artystycznej. Wspieramy naszych członków, poszerzając ich zainteresowania w dziedzinie sztuk plastycznych, ze szczególnym uwzględnieniem zagadnień związanych z grafiką warsztatową.</p>
+<p>Art Jam tworzą osoby nie tylko bardzo wrażliwe na otaczającą je rzeczywistość, ale przede wszystkim twórcze. Oprócz spotkań w ramach zajęć na uczelni, organizujemy wyjazdy na konferencje, wystawy oraz inne wydarzenia, takie jak plenery czy festiwale. Prowadzimy spotkania edukacyjne z działaczami kultury i organizatorami wystaw, a także poszerzamy wiedzę naszych członków poprzez udział w inicjatywach wspierających ich rozwój zawodowy.</p>
+<p>Stworzyliśmy klub, ponieważ chcemy zdobywać nowe umiejętności, ale przede wszystkim dlatego, że jesteśmy otwarci na nowe wyzwania. Działamy w wielu dziedzinach – od malarstwa po tak zwane nowe media ekspresji artystycznej. Zdobywamy również doświadczenie poprzez udział w różnorodnych konkursach krajowych i międzynarodowych.</p>
+<p>Art Jam działa jako niezależny projekt, a każdy członek ma takie same prawa i obowiązki, możliwość wyrażania siebie oraz uczestnictwa w realizowanych projektach. Do klubu może dołączyć każda osoba zainteresowana samorozwojem i działaniem w obszarze szeroko rozumianej sztuki współczesnej.</p>
+<p>Pracujemy w technikach takich jak grafika, fotografia, rysunek, malarstwo, animacja czy film.</p>
+<p>Członkowie klubu prezentują efekty swojej pracy przed publicznością – zarówno na żywo, jak i w przestrzeni wirtualnej, uczą się pracy zespołowej oraz współpracy z zewnętrznymi organizacjami.</p>
+<p>Jesteśmy studentami różnych kierunków, których łączy wspólna pasja. Naszym celem jest promowanie aktywności artystycznej w murach uczelni oraz nawiązywanie kontaktów z przedstawicielami świata sztuki.</p>
+<p>Choć jesteśmy młodą organizacją, dokładamy wszelkich starań, aby wspierać naszych członków w rozwoju ich zainteresowań.</p>
     </div>
   </div>
 </section>
@@ -100,7 +343,7 @@
 
       <!-- Przewodnicząca -->
       <div class="space-y-3">
-        <h3 class="text-xl font-semibold">🎓 Club Chairwoman</h3>
+        <strong class="text-xl font-semibold">Przewodnicząca</strong>
         <p>Mary Kolenchenko</p>
         <p>
           <a href="mailto:mkalianchenka@edu.cdv.pl" class="underline hover:text-black">
@@ -111,25 +354,23 @@
 
       <!-- Opiekun -->
       <div class="space-y-3">
-        <h3 class="text-xl font-semibold">👨‍🏫 Club Supervisor</h3>
+        <strong class="text-xl font-semibold">Opiekun</strong>
         <p>Grzegorz Myćka, MA</p>
         <p>
           <a href="mailto:grzegorz.mycka@cdv.pl" class="underline hover:text-black">
             grzegorz.mycka@cdv.pl
           </a>
         </p>
-        <p class="text-sm italic">Helps with organisational matters and initiates creative projects.</p>
       </div>
 
       <!-- Ogólny kontakt -->
       <div class="space-y-3">
-        <h3 class="text-xl font-semibold">✉️ General Contact</h3>
+        <strong class="text-xl font-semibold">Kontakt</strong>
         <p>
           <a href="mailto:artjam@cdv.pl" class="underline hover:text-black">
             artjam@cdv.pl
           </a>
         </p>
-        <p class="text-sm">Feel free to reach out with questions or collaboration ideas!</p>
       </div>
 
     </div>
